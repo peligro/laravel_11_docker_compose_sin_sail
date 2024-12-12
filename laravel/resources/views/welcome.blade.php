@@ -10,7 +10,8 @@
     </head>
     <body >
        <h1>Hola mundo desde Laravel 11 con Docker y docker-compose sin Sail</h1>
-       <h2>Laravel {{ App::VERSION() }}</h2>
+       <h2>Laravel {{ phpversion() }}</h2>
+       <h2>PHP {{ App::VERSION() }}</h2>
        <h2>Docker 27.2.0</h2>
        <h2>Docker compose 3.8</h2>
        <h2>Integración directa con Supervisor desde el contenedor (Para Qeues y Reverb)</h2>
