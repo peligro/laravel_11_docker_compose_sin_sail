@@ -1,8 +1,8 @@
 <hr />
 
 <h1>Hola mundo desde Laravel 11 con Docker y docker-compose sin Sail</h1>
-<h2>Laravel 8.3.14</h2>
-<h2>PHP 11.35.0</h2>
+<h2>PHP 8.3.14</h2>
+<h2>Laravel 11.35.0</h2>
 <h2>Docker 27.2.0</h2>
 <h2>Docker compose 3.8</h2>
 <h2>Integración directa con Supervisor desde el contenedor (Para Qeues y Reverb)</h2>
