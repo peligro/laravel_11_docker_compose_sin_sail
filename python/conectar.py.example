@@ -1,0 +1,12 @@
+import mysql.connector
+
+#establecer la conexión a la BD
+database = mysql.connector.connect(
+    host = '',
+    port = 3306,
+    user = '',
+    passwd = '',
+    database = '' 
+)
+
+cursor = database.cursor( buffered=True )
