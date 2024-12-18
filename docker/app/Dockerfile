@@ -3,6 +3,7 @@ FROM php:8.3-fpm
 # Instalar dependencias del sistema
 RUN apt-get update && apt-get install -y \
     git \
+    curl \
     nano \
     unzip \
     libzip-dev \
@@ -10,7 +11,11 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libldap2-dev \
     supervisor \
-    libssl-dev
+    libssl-dev \
+    gnupg \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
+    && apt-get clean
 
 # Instalar extensiones de PHP
 #RUN docker-php-ext-install pdo_mysql mbstring zip gd
@@ -26,6 +31,8 @@ COPY supervisor/supervisor.conf /etc/supervisor/supervisord.conf
 
 # Configurar el directorio de trabajo
 WORKDIR /var/www/html
+
+
 
 ##########comandos
 ## iniciar
